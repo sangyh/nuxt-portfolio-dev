@@ -4,8 +4,11 @@
 
 
 <script>
+
 export default {
+  
   async asyncData({$notion, params, error, $config: { notionTableId }}) {
+    console.log(notionTableId)
     const pageTable = await $notion.getPageTable(notionTableId)
     const posts = pageTable.filter((page) => page.public).sort((a, b) => new Date(b.created_at) - new Date(a.created_at))
     return {posts}

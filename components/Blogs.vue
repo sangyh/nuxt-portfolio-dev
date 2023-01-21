@@ -9,13 +9,13 @@
 
     <div class="wrapper-small my-5">
       <div
-        v-for="post of posts"
+        v-for="post in posts"
         :key="post.slug"
         class="project-card md:flex mt-10"
       >
         <div class="img max-w-lg md:max-w-sm mx-auto m-2">
           <nuxt-link :to="`/posts/${post.slug}`">
-            <img
+            <img  v-if="post.thumbnail && post.thumbnail.length"
               :alt="post.title"
               :src="`${post.thumbnail[0].url}`"
               class="rounded-xl h-44 w-96 object-cover object-center"

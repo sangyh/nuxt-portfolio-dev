@@ -32,7 +32,7 @@
     "eslint-plugin-vue": "^9.7.0",
     "postcss": "^8.4.20",
     "prettier": "^2.7.1",
-    "vue-notion": "^1.4.3"
+    "vue-notion": "^1.5.1"
   },
   "resolutions": {
     "@nuxt/kit": "3.0.0-rc.13"
